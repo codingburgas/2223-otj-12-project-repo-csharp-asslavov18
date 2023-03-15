@@ -233,17 +233,6 @@ namespace NutriApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap shopping_cart_icon_vector_simple_shopping_cart_sign_modern_design_style_web_site_mobile_app_eps_shopping_cart_icon_169792803 {
-            get {
-                object obj = ResourceManager.GetObject("shopping-cart-icon-vector-simple-shopping-cart-sign-modern-design-style-web-site-" +
-                        "mobile-app-eps-shopping-cart-icon-169792803", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap small_account {
             get {
                 object obj = ResourceManager.GetObject("small_account", resourceCulture);
