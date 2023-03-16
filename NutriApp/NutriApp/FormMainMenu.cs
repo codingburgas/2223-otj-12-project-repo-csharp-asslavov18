@@ -2,10 +2,29 @@ namespace NutriApp
 {
     public partial class FormMainMenu : Form
     {
+        //Fields
+        private Button currentButton;
+        private Random random;
+        private int tempIndex;
+
+        //Constructor
         public FormMainMenu()
         {
             InitializeComponent();
         }
+        //Methods
+        private Color SelectThemeColor()
+        {
+            int index = random.Next(ThemeColor.ColorList.Count);
+            while (tempIndex == index)
+            {
+                random.Next(ThemeColor.ColorList.Count);
+            }
+            tempIndex = index;
+            string color = ThemeColor.ColorList[index];
+            return ColorTranslator.FromHtml(color);
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
