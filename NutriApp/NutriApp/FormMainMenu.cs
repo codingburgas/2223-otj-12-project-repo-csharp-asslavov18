@@ -11,6 +11,7 @@ namespace NutriApp
         public FormMainMenu()
         {
             InitializeComponent();
+            random = new Random(); 
         }
         //Methods
 
@@ -21,7 +22,7 @@ namespace NutriApp
             int index = random.Next(ThemeColor.ColorList.Count);
             while (tempIndex == index)
             {
-                random.Next(ThemeColor.ColorList.Count);
+                index = random.Next(ThemeColor.ColorList.Count);
             }
             tempIndex = index;
             string color = ThemeColor.ColorList[index];
@@ -80,27 +81,27 @@ namespace NutriApp
 
         private void btnExercise_Click(object sender, EventArgs e)
         {
-
+            ActivateButton(sender);
         }
 
         private void btnFood_Click(object sender, EventArgs e)
         {
-
+            ActivateButton(sender);
         }
 
         private void btnProgress_Click(object sender, EventArgs e)
         {
-
+            ActivateButton(sender);
         }
 
         private void btnAccount_Click(object sender, EventArgs e)
         {
-
+            ActivateButton(sender);
         }
 
         private void btnDate_Click(object sender, EventArgs e)
         {
-
+            ActivateButton(sender);
         }
     }
 }
