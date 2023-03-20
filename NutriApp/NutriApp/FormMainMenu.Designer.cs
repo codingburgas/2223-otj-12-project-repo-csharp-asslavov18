@@ -35,6 +35,7 @@
             btnFood = new Button();
             btnExercise = new Button();
             panelLogo = new Panel();
+            panelTitleBar = new Panel();
             panelMenu.SuspendLayout();
             SuspendLayout();
             // 
@@ -159,11 +160,21 @@
             panelLogo.TabIndex = 0;
             panelLogo.Paint += panelLogo_Paint;
             // 
+            // panelTitleBar
+            // 
+            panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
+            panelTitleBar.Dock = DockStyle.Top;
+            panelTitleBar.Location = new Point(220, 0);
+            panelTitleBar.Name = "panelTitleBar";
+            panelTitleBar.Size = new Size(580, 80);
+            panelTitleBar.TabIndex = 1;
+            // 
             // FormMainMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(panelTitleBar);
             Controls.Add(panelMenu);
             Name = "FormMainMenu";
             Text = " ";
@@ -180,5 +191,6 @@
         private Button btnProgress;
         private Button btnFood;
         private Button btnExercise;
+        private Panel panelTitleBar;
     }
 }

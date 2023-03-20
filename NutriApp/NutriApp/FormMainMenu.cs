@@ -11,7 +11,7 @@ namespace NutriApp
         public FormMainMenu()
         {
             InitializeComponent();
-            random = new Random(); 
+            random = new Random();
         }
         //Methods
 
