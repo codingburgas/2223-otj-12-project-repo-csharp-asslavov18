@@ -36,7 +36,9 @@
             btnExercise = new Button();
             panelLogo = new Panel();
             panelTitleBar = new Panel();
+            lblTitle = new Label();
             panelMenu.SuspendLayout();
+            panelTitleBar.SuspendLayout();
             SuspendLayout();
             // 
             // panelMenu
@@ -163,11 +165,24 @@
             // panelTitleBar
             // 
             panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
+            panelTitleBar.Controls.Add(lblTitle);
             panelTitleBar.Dock = DockStyle.Top;
             panelTitleBar.Location = new Point(220, 0);
             panelTitleBar.Name = "panelTitleBar";
             panelTitleBar.Size = new Size(580, 80);
             panelTitleBar.TabIndex = 1;
+            // 
+            // lblTitle
+            // 
+            lblTitle.Anchor = AnchorStyles.None;
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(214, 24);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(127, 31);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Nutri App";
             // 
             // FormMainMenu
             // 
@@ -179,6 +194,8 @@
             Name = "FormMainMenu";
             Text = " ";
             panelMenu.ResumeLayout(false);
+            panelTitleBar.ResumeLayout(false);
+            panelTitleBar.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -192,5 +209,6 @@
         private Button btnFood;
         private Button btnExercise;
         private Panel panelTitleBar;
+        private Label lblTitle;
     }
 }
