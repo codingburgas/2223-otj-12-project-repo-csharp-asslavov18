@@ -37,6 +37,7 @@
             panelLogo = new Panel();
             panelTitleBar = new Panel();
             lblTitle = new Label();
+            panelDesktopPane = new Panel();
             panelMenu.SuspendLayout();
             panelTitleBar.SuspendLayout();
             SuspendLayout();
@@ -184,11 +185,20 @@
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Nutri App";
             // 
+            // panelDesktopPane
+            // 
+            panelDesktopPane.Dock = DockStyle.Fill;
+            panelDesktopPane.Location = new Point(220, 80);
+            panelDesktopPane.Name = "panelDesktopPane";
+            panelDesktopPane.Size = new Size(580, 370);
+            panelDesktopPane.TabIndex = 2;
+            // 
             // FormMainMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(panelDesktopPane);
             Controls.Add(panelTitleBar);
             Controls.Add(panelMenu);
             Name = "FormMainMenu";
@@ -210,5 +220,6 @@
         private Button btnExercise;
         private Panel panelTitleBar;
         private Label lblTitle;
+        private Panel panelDesktopPane;
     }
 }

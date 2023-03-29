@@ -6,6 +6,7 @@ namespace NutriApp
         private Button currentButton;
         private Random random;
         private int tempIndex;
+        private Form activeForm;
 
         //Constructor
         public FormMainMenu()
@@ -44,7 +45,7 @@ namespace NutriApp
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    panelTitleBar.BackColor=color;
+                    panelTitleBar.BackColor = color;
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     //ThemeColor.PrimaryColor = color;
                     //ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
@@ -76,7 +77,23 @@ namespace NutriApp
 
 
 
-
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            ActivateButton(btnSender);
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelDesktopPane.Controls.Add(childForm);
+            this.panelDesktopPane.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lblTitle.Text = childForm.Text;
+        }
 
 
         private void btnExercise_Click(object sender, EventArgs e)
