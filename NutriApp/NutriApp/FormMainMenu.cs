@@ -98,7 +98,8 @@ namespace NutriApp
 
         private void btnExercise_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.FormExercise(),sender);
+            //ActivateButton(sender);
         }
 
         private void btnFood_Click(object sender, EventArgs e)
