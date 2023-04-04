@@ -1,6 +1,6 @@
 ﻿namespace NutriApp.Forms
 {
-    partial class FormExercise
+    partial class Exercise
     {
         /// <summary>
         /// Required designer variable.

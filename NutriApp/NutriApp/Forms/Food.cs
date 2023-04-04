@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace NutriApp.Forms
 {
-    public partial class FormExercise : Form
+    public partial class Food : Form
     {
-        public FormExercise()
+        public Food()
         {
             InitializeComponent();
         }
-
-        //private void button3_Click(object sender, EventArgs e)
-        //{
-
-        //}
     }
 }
