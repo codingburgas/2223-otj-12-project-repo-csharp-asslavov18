@@ -31,15 +31,15 @@
             label1 = new Label();
             label2 = new Label();
             txtUsername = new TextBox();
-            textBox1 = new TextBox();
+            txtPassword = new TextBox();
             label3 = new Label();
-            textBox2 = new TextBox();
+            txtComPassword = new TextBox();
             label4 = new Label();
             checkBoxShowPas = new CheckBox();
             btnRegister = new Button();
-            button2 = new Button();
+            btnClear = new Button();
             label5 = new Label();
-            label6 = new Label();
+            lblBackToLogin = new Label();
             SuspendLayout();
             // 
             // label1
@@ -75,15 +75,16 @@
             txtUsername.Size = new Size(232, 23);
             txtUsername.TabIndex = 2;
             // 
-            // textBox1
+            // txtPassword
             // 
-            textBox1.BackColor = Color.FromArgb(230, 231, 233);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(111, 227);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(232, 23);
-            textBox1.TabIndex = 4;
+            txtPassword.BackColor = Color.FromArgb(230, 231, 233);
+            txtPassword.BorderStyle = BorderStyle.None;
+            txtPassword.Location = new Point(111, 227);
+            txtPassword.Multiline = true;
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '•';
+            txtPassword.Size = new Size(232, 23);
+            txtPassword.TabIndex = 4;
             // 
             // label3
             // 
@@ -96,15 +97,16 @@
             label3.TabIndex = 3;
             label3.Text = "Password";
             // 
-            // textBox2
+            // txtComPassword
             // 
-            textBox2.BackColor = Color.FromArgb(230, 231, 233);
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(111, 296);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(232, 23);
-            textBox2.TabIndex = 6;
+            txtComPassword.BackColor = Color.FromArgb(230, 231, 233);
+            txtComPassword.BorderStyle = BorderStyle.None;
+            txtComPassword.Location = new Point(111, 296);
+            txtComPassword.Multiline = true;
+            txtComPassword.Name = "txtComPassword";
+            txtComPassword.PasswordChar = '•';
+            txtComPassword.Size = new Size(232, 23);
+            txtComPassword.TabIndex = 6;
             // 
             // label4
             // 
@@ -129,7 +131,7 @@
             checkBoxShowPas.TabIndex = 7;
             checkBoxShowPas.Text = "Show Password";
             checkBoxShowPas.UseVisualStyleBackColor = true;
-            checkBoxShowPas.CheckedChanged += checkBox1_CheckedChanged;
+            checkBoxShowPas.CheckedChanged += checkBoxShowPas_CheckedChanged;
             // 
             // btnRegister
             // 
@@ -145,21 +147,23 @@
             btnRegister.TabIndex = 8;
             btnRegister.Text = "Register";
             btnRegister.UseVisualStyleBackColor = false;
+            btnRegister.Click += btnRegister_Click;
             // 
-            // button2
+            // btnClear
             // 
-            button2.BackColor = Color.White;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.CornflowerBlue;
-            button2.Location = new Point(111, 476);
-            button2.Name = "button2";
-            button2.Size = new Size(233, 46);
-            button2.TabIndex = 9;
-            button2.Text = "Clear";
-            button2.UseVisualStyleBackColor = false;
+            btnClear.BackColor = Color.White;
+            btnClear.Cursor = Cursors.Hand;
+            btnClear.FlatAppearance.BorderSize = 0;
+            btnClear.FlatStyle = FlatStyle.Flat;
+            btnClear.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClear.ForeColor = Color.CornflowerBlue;
+            btnClear.Location = new Point(111, 476);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(233, 46);
+            btnClear.TabIndex = 9;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
             // label5
             // 
@@ -170,38 +174,39 @@
             label5.TabIndex = 10;
             label5.Text = "Already Have an Account";
             // 
-            // label6
+            // lblBackToLogin
             // 
-            label6.AutoSize = true;
-            label6.Cursor = Cursors.Hand;
-            label6.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.CornflowerBlue;
-            label6.Location = new Point(798, 227);
-            label6.Name = "label6";
-            label6.Size = new Size(167, 25);
-            label6.TabIndex = 11;
-            label6.Text = "Back to LOGIN";
+            lblBackToLogin.AutoSize = true;
+            lblBackToLogin.Cursor = Cursors.Hand;
+            lblBackToLogin.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblBackToLogin.ForeColor = Color.CornflowerBlue;
+            lblBackToLogin.Location = new Point(798, 227);
+            lblBackToLogin.Name = "lblBackToLogin";
+            lblBackToLogin.Size = new Size(167, 25);
+            lblBackToLogin.TabIndex = 11;
+            lblBackToLogin.Text = "Back to LOGIN";
+            lblBackToLogin.Click += lblBackToLogin_Click;
             // 
             // FormRegister
             // 
             AutoScaleDimensions = new SizeF(12F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1371, 750);
-            Controls.Add(label6);
+            Controls.Add(lblBackToLogin);
             Controls.Add(label5);
-            Controls.Add(button2);
+            Controls.Add(btnClear);
             Controls.Add(btnRegister);
             Controls.Add(checkBoxShowPas);
-            Controls.Add(textBox2);
+            Controls.Add(txtComPassword);
             Controls.Add(label4);
-            Controls.Add(textBox1);
+            Controls.Add(txtPassword);
             Controls.Add(label3);
             Controls.Add(txtUsername);
             Controls.Add(label2);
             Controls.Add(label1);
             Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = SystemColors.ControlDarkDark;
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             Name = "FormRegister";
             Text = "FormRegister";
             ResumeLayout(false);
@@ -213,14 +218,14 @@
         private Label label1;
         private Label label2;
         private TextBox txtUsername;
-        private TextBox textBox1;
+        private TextBox txtPassword;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox txtComPassword;
         private Label label4;
         private CheckBox checkBoxShowPas;
         private Button btnRegister;
-        private Button button2;
+        private Button btnClear;
         private Label label5;
-        private Label label6;
+        private Label lblBackToLogin;
     }
 }
