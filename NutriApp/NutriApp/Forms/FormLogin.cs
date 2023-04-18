@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace NutriApp.Forms
 {
-    public partial class FormRegister : Form
+    public partial class FormLogin : Form
     {
-        public FormRegister()
+        public FormLogin()
         {
             InitializeComponent();
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
