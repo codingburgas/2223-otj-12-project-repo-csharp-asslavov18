@@ -28,32 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
+            buttonClear = new Button();
             btnLogin = new Button();
             checkBoxShowPas = new CheckBox();
-            textBox1 = new TextBox();
+            txtPassword = new TextBox();
             label3 = new Label();
             txtUsername = new TextBox();
             label2 = new Label();
             label1 = new Label();
             label5 = new Label();
-            label6 = new Label();
+            lblCreateAcc = new Label();
             SuspendLayout();
             // 
-            // button2
+            // buttonClear
             // 
-            button2.BackColor = Color.White;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.CornflowerBlue;
-            button2.Location = new Point(175, 427);
-            button2.Name = "button2";
-            button2.Size = new Size(233, 46);
-            button2.TabIndex = 21;
-            button2.Text = "Clear";
-            button2.UseVisualStyleBackColor = false;
+            buttonClear.BackColor = Color.White;
+            buttonClear.Cursor = Cursors.Hand;
+            buttonClear.FlatAppearance.BorderSize = 0;
+            buttonClear.FlatStyle = FlatStyle.Flat;
+            buttonClear.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonClear.ForeColor = Color.CornflowerBlue;
+            buttonClear.Location = new Point(175, 427);
+            buttonClear.Name = "buttonClear";
+            buttonClear.Size = new Size(233, 46);
+            buttonClear.TabIndex = 21;
+            buttonClear.Text = "Clear";
+            buttonClear.UseVisualStyleBackColor = false;
+            buttonClear.Click += buttonClear_Click;
             // 
             // btnLogin
             // 
@@ -69,6 +70,7 @@
             btnLogin.TabIndex = 20;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // checkBoxShowPas
             // 
@@ -82,16 +84,19 @@
             checkBoxShowPas.TabIndex = 19;
             checkBoxShowPas.Text = "Show Password";
             checkBoxShowPas.UseVisualStyleBackColor = true;
+            checkBoxShowPas.CheckedChanged += checkBoxShowPas_CheckedChanged;
             // 
-            // textBox1
+            // txtPassword
             // 
-            textBox1.BackColor = Color.FromArgb(230, 231, 233);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(176, 250);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(232, 23);
-            textBox1.TabIndex = 16;
+            txtPassword.BackColor = Color.FromArgb(230, 231, 233);
+            txtPassword.BorderStyle = BorderStyle.None;
+            txtPassword.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.Location = new Point(176, 250);
+            txtPassword.Multiline = true;
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '•';
+            txtPassword.Size = new Size(232, 29);
+            txtPassword.TabIndex = 16;
             // 
             // label3
             // 
@@ -108,10 +113,11 @@
             // 
             txtUsername.BackColor = Color.FromArgb(230, 231, 233);
             txtUsername.BorderStyle = BorderStyle.None;
+            txtUsername.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtUsername.Location = new Point(176, 179);
             txtUsername.Multiline = true;
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(232, 23);
+            txtUsername.Size = new Size(232, 29);
             txtUsername.TabIndex = 14;
             // 
             // label2
@@ -147,36 +153,37 @@
             label5.TabIndex = 22;
             label5.Text = "Don't Have an Account";
             // 
-            // label6
+            // lblCreateAcc
             // 
-            label6.AutoSize = true;
-            label6.Cursor = Cursors.Hand;
-            label6.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.CornflowerBlue;
-            label6.Location = new Point(863, 250);
-            label6.Name = "label6";
-            label6.Size = new Size(174, 25);
-            label6.TabIndex = 23;
-            label6.Text = "Create Account";
+            lblCreateAcc.AutoSize = true;
+            lblCreateAcc.Cursor = Cursors.Hand;
+            lblCreateAcc.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCreateAcc.ForeColor = Color.CornflowerBlue;
+            lblCreateAcc.Location = new Point(863, 250);
+            lblCreateAcc.Name = "lblCreateAcc";
+            lblCreateAcc.Size = new Size(174, 25);
+            lblCreateAcc.TabIndex = 23;
+            lblCreateAcc.Text = "Create Account";
+            lblCreateAcc.Click += lblCreateAcc_Click;
             // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1371, 750);
-            Controls.Add(label6);
+            Controls.Add(lblCreateAcc);
             Controls.Add(label5);
-            Controls.Add(button2);
+            Controls.Add(buttonClear);
             Controls.Add(btnLogin);
             Controls.Add(checkBoxShowPas);
-            Controls.Add(textBox1);
+            Controls.Add(txtPassword);
             Controls.Add(label3);
             Controls.Add(txtUsername);
             Controls.Add(label2);
             Controls.Add(label1);
             Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = SystemColors.ControlDarkDark;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "FormLogin";
             Text = "FormLogin";
             ResumeLayout(false);
@@ -184,17 +191,17 @@
         }
 
         #endregion
-        private Button button2;
+        private Button buttonClear;
         private Button btnLogin;
         private CheckBox checkBoxShowPas;
         private TextBox textBox2;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox txtPassword;
         private Label label3;
         private TextBox txtUsername;
         private Label label2;
         private Label label1;
         private Label label5;
-        private Label label6;
+        private Label lblCreateAcc;
     }
 }

@@ -19,9 +19,6 @@ namespace NutriApp.Forms
         {
             InitializeComponent();
         }
-        //SqlConnection con = new SqlConnection("Server=(localdb)\\SQLEXPRESS;" +
-          // "database = dbNutriApp; Trusted_Connection=True; MultipleActiveResultSets=true");
-        
         SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=dbNutriApp;Integrated Security=True;MultipleActiveResultSets=True");
         private void btnRegister_Click(object sender, EventArgs e)
         {
@@ -45,7 +42,7 @@ namespace NutriApp.Forms
 
 
                 MessageBox.Show("Your Account has been Successfully Created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+
             }
             else
             {
@@ -66,7 +63,7 @@ namespace NutriApp.Forms
             }
             else
             {
-                txtComPassword.PasswordChar = '•';
+                txtPassword.PasswordChar = '•';
                 txtComPassword.PasswordChar = '•';
             }
         }

@@ -72,7 +72,7 @@
             txtUsername.Location = new Point(111, 156);
             txtUsername.Multiline = true;
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(232, 23);
+            txtUsername.Size = new Size(232, 29);
             txtUsername.TabIndex = 2;
             // 
             // txtPassword
@@ -83,7 +83,7 @@
             txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '•';
-            txtPassword.Size = new Size(232, 23);
+            txtPassword.Size = new Size(232, 29);
             txtPassword.TabIndex = 4;
             // 
             // label3
@@ -105,7 +105,7 @@
             txtComPassword.Multiline = true;
             txtComPassword.Name = "txtComPassword";
             txtComPassword.PasswordChar = '•';
-            txtComPassword.Size = new Size(232, 23);
+            txtComPassword.Size = new Size(232, 29);
             txtComPassword.TabIndex = 6;
             // 
             // label4
