@@ -53,8 +53,9 @@
             panelMenu.Controls.Add(panelLogo);
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
+            panelMenu.Margin = new Padding(3, 2, 3, 2);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(220, 450);
+            panelMenu.Size = new Size(192, 338);
             panelMenu.TabIndex = 0;
             // 
             // btnDate
@@ -65,10 +66,11 @@
             btnDate.ForeColor = Color.Gainsboro;
             btnDate.Image = Properties.Resources.date_icon_smaller;
             btnDate.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDate.Location = new Point(0, 320);
+            btnDate.Location = new Point(0, 277);
+            btnDate.Margin = new Padding(3, 2, 3, 2);
             btnDate.Name = "btnDate";
-            btnDate.Padding = new Padding(12, 0, 0, 0);
-            btnDate.Size = new Size(220, 60);
+            btnDate.Padding = new Padding(10, 0, 0, 0);
+            btnDate.Size = new Size(192, 52);
             btnDate.TabIndex = 5;
             btnDate.Text = "Date Selector";
             btnDate.TextAlign = ContentAlignment.MiddleLeft;
@@ -84,10 +86,11 @@
             btnAccount.ForeColor = Color.Gainsboro;
             btnAccount.Image = Properties.Resources.account_smaller;
             btnAccount.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAccount.Location = new Point(0, 260);
+            btnAccount.Location = new Point(0, 221);
+            btnAccount.Margin = new Padding(3, 2, 3, 2);
             btnAccount.Name = "btnAccount";
-            btnAccount.Padding = new Padding(12, 0, 0, 0);
-            btnAccount.Size = new Size(220, 60);
+            btnAccount.Padding = new Padding(10, 0, 0, 0);
+            btnAccount.Size = new Size(192, 56);
             btnAccount.TabIndex = 4;
             btnAccount.Text = "  Manage Account";
             btnAccount.TextAlign = ContentAlignment.MiddleLeft;
@@ -103,10 +106,11 @@
             btnProgress.ForeColor = Color.Gainsboro;
             btnProgress.Image = Properties.Resources.smaller_progress;
             btnProgress.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProgress.Location = new Point(0, 200);
+            btnProgress.Location = new Point(0, 167);
+            btnProgress.Margin = new Padding(3, 2, 3, 2);
             btnProgress.Name = "btnProgress";
-            btnProgress.Padding = new Padding(12, 0, 0, 0);
-            btnProgress.Size = new Size(220, 60);
+            btnProgress.Padding = new Padding(10, 0, 0, 0);
+            btnProgress.Size = new Size(192, 54);
             btnProgress.TabIndex = 3;
             btnProgress.Text = "  Progress";
             btnProgress.TextAlign = ContentAlignment.MiddleLeft;
@@ -122,10 +126,11 @@
             btnFood.ForeColor = Color.Gainsboro;
             btnFood.Image = Properties.Resources.small_burger;
             btnFood.ImageAlign = ContentAlignment.MiddleLeft;
-            btnFood.Location = new Point(0, 140);
+            btnFood.Location = new Point(0, 113);
+            btnFood.Margin = new Padding(3, 2, 3, 2);
             btnFood.Name = "btnFood";
-            btnFood.Padding = new Padding(12, 0, 0, 0);
-            btnFood.Size = new Size(220, 60);
+            btnFood.Padding = new Padding(10, 0, 0, 0);
+            btnFood.Size = new Size(192, 54);
             btnFood.TabIndex = 2;
             btnFood.Text = "  Consume Food";
             btnFood.TextAlign = ContentAlignment.MiddleLeft;
@@ -142,10 +147,11 @@
             btnExercise.ForeColor = Color.Gainsboro;
             btnExercise.Image = Properties.Resources.dumbell_4_91;
             btnExercise.ImageAlign = ContentAlignment.MiddleLeft;
-            btnExercise.Location = new Point(0, 80);
+            btnExercise.Location = new Point(0, 60);
+            btnExercise.Margin = new Padding(3, 2, 3, 2);
             btnExercise.Name = "btnExercise";
-            btnExercise.Padding = new Padding(12, 0, 0, 0);
-            btnExercise.Size = new Size(220, 60);
+            btnExercise.Padding = new Padding(10, 0, 0, 0);
+            btnExercise.Size = new Size(192, 53);
             btnExercise.TabIndex = 1;
             btnExercise.Text = "  Exercise";
             btnExercise.TextAlign = ContentAlignment.MiddleLeft;
@@ -158,8 +164,9 @@
             panelLogo.BackColor = Color.FromArgb(39, 39, 58);
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
+            panelLogo.Margin = new Padding(3, 2, 3, 2);
             panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(220, 80);
+            panelLogo.Size = new Size(192, 60);
             panelLogo.TabIndex = 0;
             panelLogo.Paint += panelLogo_Paint;
             // 
@@ -168,9 +175,10 @@
             panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
             panelTitleBar.Controls.Add(lblTitle);
             panelTitleBar.Dock = DockStyle.Top;
-            panelTitleBar.Location = new Point(220, 0);
+            panelTitleBar.Location = new Point(192, 0);
+            panelTitleBar.Margin = new Padding(3, 2, 3, 2);
             panelTitleBar.Name = "panelTitleBar";
-            panelTitleBar.Size = new Size(580, 80);
+            panelTitleBar.Size = new Size(508, 60);
             panelTitleBar.TabIndex = 1;
             // 
             // lblTitle
@@ -179,28 +187,30 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.White;
-            lblTitle.Location = new Point(214, 24);
+            lblTitle.Location = new Point(187, 18);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(127, 31);
+            lblTitle.Size = new Size(103, 26);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Nutri App";
             // 
             // panelDesktopPane
             // 
             panelDesktopPane.Dock = DockStyle.Fill;
-            panelDesktopPane.Location = new Point(220, 80);
+            panelDesktopPane.Location = new Point(192, 60);
+            panelDesktopPane.Margin = new Padding(3, 2, 3, 2);
             panelDesktopPane.Name = "panelDesktopPane";
-            panelDesktopPane.Size = new Size(580, 370);
+            panelDesktopPane.Size = new Size(508, 278);
             panelDesktopPane.TabIndex = 2;
             // 
             // FormMainMenu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
             Controls.Add(panelDesktopPane);
             Controls.Add(panelTitleBar);
             Controls.Add(panelMenu);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormMainMenu";
             Text = " ";
             panelMenu.ResumeLayout(false);
