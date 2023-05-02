@@ -17,6 +17,7 @@ namespace NutriApp.Forms
         public Date()
         {
             InitializeComponent();
+            lblCurrentDate.Text = FormMainMenu.FormMainMenuInstance.currentDate;
             lblDate = lblCurrentDate;
             DateFormInstance = this;
             //Exercise.ExerciseFormInstance.lblCurrentDate= lblDate;
@@ -24,7 +25,12 @@ namespace NutriApp.Forms
 
 
         }
-        
 
+        private void btnChangeDate_Click(object sender, EventArgs e)
+        {
+            lblCurrentDate.Text = txtChangeDate.Text;
+            FormMainMenu.FormMainMenuInstance.currentDate=txtChangeDate.Text;
+            txtChangeDate.Clear();
+        }
     }
 }

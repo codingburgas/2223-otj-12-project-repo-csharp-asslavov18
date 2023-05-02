@@ -31,6 +31,9 @@
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             label5 = new Label();
             lblCurrentDate = new Label();
+            txtChangeDate = new TextBox();
+            label1 = new Label();
+            btnChangeDate = new Button();
             SuspendLayout();
             // 
             // sqlCommand1
@@ -60,11 +63,44 @@
             lblCurrentDate.Text = "2023-05-23";
             lblCurrentDate.TextAlign = ContentAlignment.TopCenter;
             // 
+            // txtChangeDate
+            // 
+            txtChangeDate.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtChangeDate.Location = new Point(244, 112);
+            txtChangeDate.Name = "txtChangeDate";
+            txtChangeDate.Size = new Size(100, 26);
+            txtChangeDate.TabIndex = 15;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(110, 115);
+            label1.Name = "label1";
+            label1.Size = new Size(112, 20);
+            label1.TabIndex = 16;
+            label1.Text = "Change Date:";
+            label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // btnChangeDate
+            // 
+            btnChangeDate.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnChangeDate.Location = new Point(399, 112);
+            btnChangeDate.Name = "btnChangeDate";
+            btnChangeDate.Size = new Size(75, 23);
+            btnChangeDate.TabIndex = 17;
+            btnChangeDate.Text = "OK";
+            btnChangeDate.UseVisualStyleBackColor = true;
+            btnChangeDate.Click += btnChangeDate_Click;
+            // 
             // Date
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnChangeDate);
+            Controls.Add(label1);
+            Controls.Add(txtChangeDate);
             Controls.Add(lblCurrentDate);
             Controls.Add(label5);
             Name = "Date";
@@ -78,5 +114,8 @@
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
         private Label label5;
         private Label lblCurrentDate;
+        private TextBox txtChangeDate;
+        private Label label1;
+        private Button btnChangeDate;
     }
 }

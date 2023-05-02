@@ -1,3 +1,5 @@
+using NutriApp.Forms;
+
 namespace NutriApp
 {
     public partial class FormMainMenu : Form
@@ -7,11 +9,13 @@ namespace NutriApp
         private Random random;
         private int tempIndex;
         private Form activeForm;
-
+        public string currentDate = "2023-05-23";
+        public static FormMainMenu FormMainMenuInstance;
         //Constructor
         public FormMainMenu()
         {
             InitializeComponent();
+            FormMainMenuInstance = this;
             random = new Random();
         }
         //Methods

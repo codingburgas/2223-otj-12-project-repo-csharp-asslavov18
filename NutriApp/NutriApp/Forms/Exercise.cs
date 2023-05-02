@@ -18,10 +18,8 @@ namespace NutriApp.Forms
             InitializeComponent();
             ExerciseFormInstance = this;
 
-            if(Date.DateFormInstance!=null&& Date.DateFormInstance.lblDate.Text!="")
-            {
-                lblCurrentDateEx.Text = Date.DateFormInstance.lblDate.Text;
-            }
+            lblCurrentDateEx.Text = FormMainMenu.FormMainMenuInstance.currentDate;
+            
             //this.Show();
         }
 
