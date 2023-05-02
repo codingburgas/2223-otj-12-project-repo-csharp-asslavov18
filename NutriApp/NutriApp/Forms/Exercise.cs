@@ -44,21 +44,96 @@ namespace NutriApp.Forms
             if (txtPushUp.Text.Length > 0)
             {
 
-                //string query = "INSERT INTO UserExcercises VALUES ( 'admin','2023-05-23','1','2','20')";
-
                 string query = "INSERT INTO UserExcercises VALUES ('" + user + "','" + date + "','"
               + "1" + "','" + txtPushUp.Text + "','" + (Int32.Parse(txtPushUp.Text) * 7).ToString() + "')";
 
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
                 txtPushUp.Clear();
-                con.Close();
+                
             }
-            
+
+            if (txtPullUp.Text.Length > 0)
+            {
+
+                string query = "INSERT INTO UserExcercises VALUES ('" + user + "','" + date + "','"
+              + "2" + "','" + txtPullUp.Text + "','" + (Int32.Parse(txtPullUp.Text) * 9).ToString() + "')";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                txtPullUp.Clear();
+            }
+
+            if (txtBenchPress.Text.Length > 0)
+            {
+
+                string query = "INSERT INTO UserExcercises VALUES ('" + user + "','" + date + "','"
+              + "3" + "','" + txtBenchPress.Text + "','" + (Int32.Parse(txtBenchPress.Text) * 10).ToString() + "')";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                txtBenchPress.Clear();
+            }
+
+            if (txtSquat.Text.Length > 0)
+            {
+
+                string query = "INSERT INTO UserExcercises VALUES ('" + user + "','" + date + "','"
+              + "4" + "','" + txtSquat.Text + "','" + (Int32.Parse(txtSquat.Text) * 12).ToString() + "')";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                txtSquat.Clear();
+            }
+
+            if (txtShoulderPress.Text.Length > 0)
+            {
+
+                string query = "INSERT INTO UserExcercises VALUES ('" + user + "','" + date + "','"
+              + "5" + "','" + txtShoulderPress.Text + "','" + (Int32.Parse(txtShoulderPress.Text) * 8).ToString() + "')";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                txtShoulderPress.Clear();
+            }
+
+            if (txtBiceps.Text.Length > 0)
+            {
+
+                string query = "INSERT INTO UserExcercises VALUES ('" + user + "','" + date + "','"
+              + "6" + "','" + txtBiceps.Text + "','" + (Int32.Parse(txtBiceps.Text) * 8).ToString() + "')";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                txtBiceps.Clear();
+            }
+
+            if (txtTriceps.Text.Length > 0)
+            {
+
+                string query = "INSERT INTO UserExcercises VALUES ('" + user + "','" + date + "','"
+              + "7" + "','" + txtTriceps.Text + "','" + (Int32.Parse(txtTriceps.Text) * 9).ToString() + "')";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                txtTriceps.Clear();
+            }
+
+            if (txtSpider.Text.Length > 0)
+            {
+
+                string query = "INSERT INTO UserExcercises VALUES ('" + user + "','" + date + "','"
+              + "8" + "','" + txtSpider.Text + "','" + (Int32.Parse(txtSpider.Text) * 9).ToString() + "')";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                txtSpider.Clear();
+            }
 
 
 
-            //con.Close();
+
+            con.Close();
         }
 
         //private void button3_Click(object sender, EventArgs e)
