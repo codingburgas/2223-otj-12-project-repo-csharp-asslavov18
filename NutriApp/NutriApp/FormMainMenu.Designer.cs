@@ -1,6 +1,6 @@
 ﻿namespace NutriApp
 {
-    partial class FormMainMenu
+    public partial class FormMainMenu
     {
         /// <summary>
         ///  Required designer variable.

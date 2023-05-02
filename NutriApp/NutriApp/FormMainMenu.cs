@@ -10,13 +10,15 @@ namespace NutriApp
         private int tempIndex;
         private Form activeForm;
         public string currentDate = "2023-05-23";
+        public string currentUser;
         public static FormMainMenu FormMainMenuInstance;
         //Constructor
-        public FormMainMenu()
+        public FormMainMenu(string user)
         {
             InitializeComponent();
             FormMainMenuInstance = this;
             random = new Random();
+            currentUser = user;
         }
         //Methods
 

@@ -47,7 +47,7 @@
             txtBiceps = new TextBox();
             txtTriceps = new TextBox();
             txtSpider = new TextBox();
-            button1 = new Button();
+            btnInsertData = new Button();
             lblCurrentDateEx = new Label();
             label12 = new Label();
             SuspendLayout();
@@ -247,15 +247,16 @@
             txtSpider.Size = new Size(70, 26);
             txtSpider.TabIndex = 28;
             // 
-            // button1
+            // btnInsertData
             // 
-            button1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(1078, 551);
-            button1.Name = "button1";
-            button1.Size = new Size(105, 45);
-            button1.TabIndex = 29;
-            button1.Text = "Insert Data";
-            button1.UseVisualStyleBackColor = true;
+            btnInsertData.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnInsertData.Location = new Point(1078, 551);
+            btnInsertData.Name = "btnInsertData";
+            btnInsertData.Size = new Size(105, 45);
+            btnInsertData.TabIndex = 29;
+            btnInsertData.Text = "Insert Data";
+            btnInsertData.UseVisualStyleBackColor = true;
+            btnInsertData.Click += btnInsertData_Click;
             // 
             // lblCurrentDateEx
             // 
@@ -286,7 +287,7 @@
             ClientSize = new Size(1459, 656);
             Controls.Add(lblCurrentDateEx);
             Controls.Add(label12);
-            Controls.Add(button1);
+            Controls.Add(btnInsertData);
             Controls.Add(txtSpider);
             Controls.Add(txtTriceps);
             Controls.Add(txtBiceps);
@@ -333,7 +334,7 @@
         private TextBox txtBiceps;
         private TextBox txtTriceps;
         private TextBox txtSpider;
-        private Button button1;
+        private Button btnInsertData;
         private Label lblCurrentDateEx;
         private Label label12;
     }
