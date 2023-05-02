@@ -41,7 +41,7 @@ namespace NutriApp.Forms
             }
             con.Close();
         }
-
+        
         private void buttonClear_Click(object sender, EventArgs e)
         {
             txtUsername.Text = "";

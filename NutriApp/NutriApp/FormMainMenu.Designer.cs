@@ -192,6 +192,7 @@
             lblTitle.Size = new Size(103, 26);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Nutri App";
+            lblTitle.Click += lblTitle_Click;
             // 
             // panelDesktopPane
             // 
