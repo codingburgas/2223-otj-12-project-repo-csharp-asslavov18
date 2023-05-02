@@ -27,12 +27,12 @@ namespace NutriApp.Forms
             string user = FormMainMenu.FormMainMenuInstance.currentUser;
             string date = txtDate.Text;
             string query = "SELECT * FROM UserFood WHERE username = '" + user + "' and date='" + date + "'";
+            string query2 = "SELECT * FROM UserExcercises WHERE username = '" + user + "' and date='" + date + "'";
             //string query = "SELECT * FROM Users WHERE username = 'anton1'";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader reader = cmd.ExecuteReader();
 
             //DataTable schemaTable = reader.GetSchemaTable();
-            DataTable schemaTable = reader.GetSchemaTable();
             txtGridData.Clear();
             if (reader.HasRows)
             {
@@ -51,7 +51,28 @@ namespace NutriApp.Forms
                 Console.WriteLine("No rows found.");
             }
             reader.Close();
-            
+            /////////
+            SqlCommand cmd2 = new SqlCommand(query2, con);
+            SqlDataReader reader2 = cmd.ExecuteReader();
+            if (reader2.HasRows)
+            {
+                while (reader2.Read())
+                {
+                    txtGridData.AppendText(reader2.GetString(0) + " exercised ExerciseID = ");
+                    txtGridData.AppendText(reader2.GetInt32(2).ToString() + " on ");
+                    txtGridData.AppendText(reader2.GetDateTime(1).ToString().Substring(0,9));
+
+                    txtGridData.AppendText(" Repetitions: " + reader2.GetInt32(3).ToString());
+                    txtGridData.AppendText(" Calories burned: " + reader2.GetInt32(4).ToString() + "\n");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No rows found.");
+            }
+            reader2.Close();
+
+
 
             con.Close();
         }
