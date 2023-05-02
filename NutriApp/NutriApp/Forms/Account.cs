@@ -16,5 +16,11 @@ namespace NutriApp.Forms
         {
             InitializeComponent();
         }
+
+        private void lblBackToLogin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new FormLogin().Show();
+        }
     }
 }
