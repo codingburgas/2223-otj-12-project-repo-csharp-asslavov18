@@ -114,7 +114,7 @@ namespace NutriApp.Forms
                 txtPasta.Clear();
             }
 
-
+            MessageBox.Show("Successful data insertion, Food Data has been stored", "Good Job!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             con.Close();
         }
     }

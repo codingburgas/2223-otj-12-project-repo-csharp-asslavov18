@@ -30,7 +30,6 @@ namespace NutriApp.Forms
             if (dr.Read())
             {
                 
-                //FormMainMenu.FormMainMenuInstance.currentUser = txtUsername.Text;
                 new FormMainMenu(txtUsername.Text).Show();
                 this.Hide();
             }

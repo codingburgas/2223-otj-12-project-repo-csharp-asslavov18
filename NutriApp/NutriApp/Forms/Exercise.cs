@@ -130,15 +130,11 @@ namespace NutriApp.Forms
                 txtSpider.Clear();
             }
 
-
+            MessageBox.Show("Successful data insertion, Exercise data has been stored", "Good Job!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             con.Close();
         }
 
-        //private void button3_Click(object sender, EventArgs e)
-        //{
-
-        //}
     }
 }

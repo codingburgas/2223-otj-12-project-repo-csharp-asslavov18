@@ -28,11 +28,10 @@ namespace NutriApp.Forms
             string date = txtDate.Text;
             string query = "SELECT * FROM UserFood WHERE username = '" + user + "' and date='" + date + "'";
             string query2 = "SELECT * FROM UserExcercises WHERE username = '" + user + "' and date='" + date + "'";
-            //string query = "SELECT * FROM Users WHERE username = 'anton1'";
+
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader reader = cmd.ExecuteReader();
 
-            //DataTable schemaTable = reader.GetSchemaTable();
             txtGridData.Clear();
             if (reader.HasRows)
             {
@@ -40,20 +39,16 @@ namespace NutriApp.Forms
                 {
                     txtGridData.AppendText(reader.GetString(0)+" consumed FoodID = ");
                     txtGridData.AppendText(reader.GetInt32(2).ToString() + " on ");
-                    txtGridData.AppendText(reader.GetDateTime(1).ToString().Substring(9));
+                    txtGridData.AppendText(reader.GetDateTime(1).ToString().Substring(0,9));
                     
                     txtGridData.AppendText(" Servings: "+reader.GetInt32(3).ToString());
                     txtGridData.AppendText(" Calories gained: "+reader.GetInt32(4).ToString()+"\n");
                 }
             }
-            else
-            {
-                Console.WriteLine("No rows found.");
-            }
-            reader.Close();
-            /////////
+            
+            
             SqlCommand cmd2 = new SqlCommand(query2, con);
-            SqlDataReader reader2 = cmd.ExecuteReader();
+            SqlDataReader reader2 = cmd2.ExecuteReader();
             if (reader2.HasRows)
             {
                 while (reader2.Read())
@@ -66,12 +61,14 @@ namespace NutriApp.Forms
                     txtGridData.AppendText(" Calories burned: " + reader2.GetInt32(4).ToString() + "\n");
                 }
             }
-            else
+            else if(reader2.HasRows==false && reader.HasRows==false)
             {
-                Console.WriteLine("No rows found.");
+                MessageBox.Show("Invalid Date, Please Try Again", "Data Showcase Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtDate.Clear();
+                txtDate.Focus();
             }
             reader2.Close();
-
+            reader.Close();
 
 
             con.Close();
