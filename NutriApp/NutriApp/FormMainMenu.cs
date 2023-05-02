@@ -13,6 +13,12 @@ namespace NutriApp
         public string currentUser;
         public static FormMainMenu FormMainMenuInstance;
         //Constructor
+        public FormMainMenu()
+        {
+            InitializeComponent();
+            FormMainMenuInstance = this;
+            random = new Random();
+        }
         public FormMainMenu(string user)
         {
             InitializeComponent();

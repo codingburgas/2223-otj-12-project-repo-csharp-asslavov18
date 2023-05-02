@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Account";
+            label5 = new Label();
+            SuspendLayout();
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(669, 41);
+            label5.Name = "label5";
+            label5.Size = new Size(174, 25);
+            label5.TabIndex = 13;
+            label5.Text = "Manage Account";
+            label5.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // Account
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1472, 650);
+            Controls.Add(label5);
+            Name = "Account";
+            Text = "Account";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label5;
     }
 }
